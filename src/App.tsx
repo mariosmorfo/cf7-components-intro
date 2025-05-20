@@ -3,7 +3,7 @@ import FunctionalComponent from "./components/FunctionalComponent.tsx";
 import ArrowFunctionalComponents from "./components/ArrowFunctionalComponents.tsx";
 
 import ArrowFunctionalComponentsWithProps from "./components/ArrowFunctionalComponentsWithProps.tsx";
-// import ArrowFunctionalComponentsWithPropsType from "./components/ArrowFunctionalComponentsWithPropsType.tsx";
+import ArrowFunctionalComponentsWithPropsType from "./components/ArrowFunctionalComponentsWithPropsType.tsx";
 function App() {
 
   return (
@@ -12,7 +12,7 @@ function App() {
         <FunctionalComponent/>
         <ArrowFunctionalComponents/>
         <ArrowFunctionalComponentsWithProps title="Is arrow functional component with props"/>
-        {/*<ArrowFunctionalComponentsWithProps title="Is arrow functional component with props" description="This is description"/>*/}
+        <ArrowFunctionalComponentsWithPropsType title="Is arrow functional component with props" description="This is description"/>
     </>
   )
 }

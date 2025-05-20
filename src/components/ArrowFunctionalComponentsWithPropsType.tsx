@@ -18,7 +18,7 @@ type Props = A & B;
 
 
 
-const ArrowFunctionalComponentsWithProps = ({title, description}: Props) => {
+const ArrowFunctionalComponentsWithPropsType = ({title, description}: Props) => {
     return (
         <>
 
@@ -30,4 +30,4 @@ const ArrowFunctionalComponentsWithProps = ({title, description}: Props) => {
     )
 }
 
-export default ArrowFunctionalComponentsWithProps;
+export default ArrowFunctionalComponentsWithPropsType;
