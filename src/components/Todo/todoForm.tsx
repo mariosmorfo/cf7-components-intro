@@ -17,7 +17,7 @@ const TodoForm = ({dispatch} : TodoFormProps) => {
     }
     const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-       if(text.trim() === "") {
+       if(text.trim() == "") {
            dispatch({type: "ADD", payload: text});
            setText("")
        }
