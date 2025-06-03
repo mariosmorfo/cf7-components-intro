@@ -3,9 +3,9 @@
 // import ArrowFunctionalComponentsWithProps from "./components/ArrowFunctionalComponentsWithProps.tsx";
 // import ArrowFunctionalComponentsWithPropsType from "./components/ArrowFunctionalComponentsWithPropsType.tsx";
 // import CodingFactoryLogo from "./components/CodingFactoryLogo.tsx";
-import Layout from "./components/Layout.tsx";
+// import Layout from "./components/Layout.tsx";
 // import Todo from "./components/Todo/Todo.tsx";
-import OnlineStatus from "./components/OnlineStatus.tsx";
+// import OnlineStatus from "./components/OnlineStatus.tsx";
 // import NameChanger from "./components/NameChanger.tsx";
 // import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
 // import Counter from "./components/Counter.tsx";
@@ -14,6 +14,9 @@ import OnlineStatus from "./components/OnlineStatus.tsx";
 // import CounterWithMoreStates from "./components/CounterWithMoreStates.tsx";
 // import CounterAdvanced from "./components/CounterAdvanced.tsx";
 // import CounterWithCustomHook from "./components/CounterWithCustomHook.tsx";
+import {BrowserRouter, Route, Routes} from "react-router";
+import HomePage from "./pages/HomePage.tsx";
+import NameChangerPage from "./pages/NameChangerPage.tsx";
 
 function App() {
 
@@ -25,7 +28,7 @@ function App() {
     {/*    <ArrowFunctionalComponentsWithProps title="Is arrow functional component with props"/>*/}
     {/*    <ArrowFunctionalComponentsWithPropsType title="Is arrow functional component with props" description="This is description"/>*/}
     {/*    <CodingFactoryLogo/>*/}
-        <Layout>
+    {/*    <Layout>*/}
             {/*<h1 className="text-center text-2xl font-bold">This is a h1 title</h1>*/}
             {/*<FunctionalComponent/>*/}
             {/*<ClassComponentWithState/>*/}
@@ -36,8 +39,17 @@ function App() {
             {/*<CounterAdvanced/>*/}
             {/*<CounterWithCustomHook/>*/}
             {/*<Todo/>*/}
-            <OnlineStatus/>
-        </Layout>
+            {/*<OnlineStatus/>*/}
+        {/*</Layout>*/}
+
+
+
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<HomePage/>}/>
+                <Route path="name-changer" element={<NameChangerPage/>} />
+            </Routes>
+        </BrowserRouter>
     </>
   )
 }
