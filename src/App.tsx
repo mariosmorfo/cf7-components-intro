@@ -17,7 +17,7 @@
 // import Todo from "./components/Todo/Todo.tsx";
 // import OnlineStatus from "./components/OnlineStatus.tsx";
 import {BrowserRouter, Routes, Route} from "react-router";
-import HomePage from "./pages/HomePage.tsx";
+// import HomePage from "./pages/HomePage.tsx";
 import NameChangerPage from "./pages/NameChangerPage.tsx";
 // import NameChanger from "./components/NameChanger.tsx";
 import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
@@ -26,6 +26,9 @@ import RouterLayout from "./components/RouterLayout.tsx";
 import ExamplesPage from "./pages/ExamplesPage.tsx";
 import RouterExamplesLayout from "./components/RouterExamplesLayout.tsx";
 import AutoRedirectPage from "./pages/AutoRedirectPage.tsx";
+import NotFoundPage from "./pages/NotFoundPage.tsx";
+import FocusInput from "./components/FocusInput.tsx";
+// import UnControlledInput from "./components/UnControlledInput.tsx";
 
 function App() {
 
@@ -66,7 +69,9 @@ function App() {
                 <Routes>
                     <Route element={<RouterLayout />}>
                         {/*<Route path="/" element={<HomePage />}/>*/}
-                        <Route index element={<HomePage />}/>
+                        {/*<Route index element={<HomePage />}/>*/}
+                        <Route index element={<FocusInput />}/>
+                        {/*<Route index element={<UnControlledInput />}/>*/}
                     </Route>
                     <Route path="examples" element={<RouterExamplesLayout/>}>
                         <Route index  element={<ExamplesPage/>}/>
@@ -77,6 +82,8 @@ function App() {
                     <Route path="users/:userId" element={<UserPage />}/>
                     <Route path="users" element={<UserPage />}/>
                     {/*<Route path="files/*" element={<FilePage/>}/>*/}
+                    <Route path="*" element={<NotFoundPage/>}/>
+
                 </Routes>
             </BrowserRouter>
 
