@@ -14,10 +14,11 @@ const initialValues = {
 
 const MultiFieldForm = () => {
     const [values, setValues] = useState<FormValues>(initialValues);
-
+    const [submittedData, setSubmittedData] = useState<FormValues | null>(null);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+        setSubmittedData(values);
         console.log(values);
         setValues(initialValues);
     };
@@ -32,12 +33,13 @@ const MultiFieldForm = () => {
 
     const handleClear = () => {
         setValues(initialValues);
+        setSubmittedData(null);
     };
 
     return(
         <>
-            <div className="flex max-w-sm mx-auto mt-8">
-                <form onSubmit={handleSubmit} className="space-y-4">
+            <div className=" flex text-center max-w-sm mx-auto mt-8">
+                <form onSubmit={handleSubmit} className="space-y-4 ">
                     <input
                         type="text"
                         name="name"
@@ -80,6 +82,14 @@ const MultiFieldForm = () => {
                         </button>
                     </div>
 
+                    { submittedData && (
+                        <div className="mt-6 border-t pt-4 space-y-2">
+                            <h2 className="font-semibold">Submitted Data</h2>
+                            <p><strong>Name:</strong> {submittedData.name}</p>
+                            <p><strong>Email:</strong> {submittedData.email}</p>
+                            <p><strong>Message:</strong> {submittedData.message}</p>
+                        </div>
+                    )}
 
                 </form>
             </div>
