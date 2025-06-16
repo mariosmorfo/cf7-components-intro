@@ -48,6 +48,7 @@ const MultiFieldForm = () => {
                         onChange={handleChange}
                         className="w-full px-4 py-2 rounded border"
                         required
+                        autoComplete="off"
                     />
                     <input
                         type="email"
@@ -57,6 +58,7 @@ const MultiFieldForm = () => {
                         onChange={handleChange}
                         className="w-full px-4 py-2 rounded border"
                         required
+                        autoComplete="off"
                     />
                     <textarea
                         name="message"
@@ -65,6 +67,7 @@ const MultiFieldForm = () => {
                         onChange={handleChange}
                         className="w-full px-4 py-2 rounded border"
                         minLength={5}
+                        autoComplete="off"
                         required
                     ></textarea>
                     <div className="flex gap-4">
